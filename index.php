@@ -1,16 +1,20 @@
 <?php
+//autoload
+require './vendor/autoload.php';
 
-//require './vendor/autoload.php';
+//require_once Models, Controllers
+require_once './src/Models/Router.php';
+require_once './src/Controllers/HomeController.php';
+
+//load Class
+use Models\Router;
 
 define("BASE_URL", '/mvc');
 
-require_once 'models/Router.php';
-require_once 'controllers/HomeController.php';
-
 $router = new Router();
 
-$router->addRoute('GET', BASE_URL.'/home', 'HomeController', 'index');
-$router->addRoute('GET', BASE_URL. '/info', 'HomeController', 'info');
+$router->addRoute('GET', BASE_URL.'/home', '\Controllers\HomeController', 'index');
+$router->addRoute('GET', BASE_URL. '/info', '\Controllers\HomeController', 'info');
 
 $method = $_SERVER['REQUEST_METHOD'];
 $uri = $_SERVER['REQUEST_URI'];

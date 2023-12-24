@@ -1,5 +1,7 @@
 <?php
 
+namespace Models;
+
 class Router { 
     private $routes;
 public function __construct() {
