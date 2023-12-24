@@ -9,7 +9,7 @@ require_once './src/Controllers/HomeController.php';
 //load Class
 use Models\Router;
 
-define("BASE_URL", '/mvc');
+const BASE_URL = '/mvc';
 
 $router = new Router();
 
