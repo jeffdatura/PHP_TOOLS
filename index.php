@@ -13,8 +13,8 @@ const BASE_URL = '/mvc';
 
 $router = new Router();
 
-$router->addRoute('GET', BASE_URL.'/home', '\Controllers\HomeController', 'index');
-$router->addRoute('GET', BASE_URL. '/info', '\Controllers\HomeController', 'info');
+$router->addRoute('GET', BASE_URL.'/home', '\Codespace\PhpTools\Controllers', 'index');
+$router->addRoute('GET', BASE_URL. '/info', '\Codespace\PhpTools\Controllers', 'info');
 
 $method = $_SERVER['REQUEST_METHOD'];
 $uri = $_SERVER['REQUEST_URI'];
