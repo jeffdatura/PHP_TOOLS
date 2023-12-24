@@ -1,0 +1,15 @@
+{
+    "name": "codespace/php_tools",
+    "description": "mvc_router",
+    "autoload": {
+        "psr-4": {
+            "Codespace\\PhpTools\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jeff"
+        }
+    ],
+    "require": {}
+}
