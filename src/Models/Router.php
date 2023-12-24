@@ -1,14 +1,15 @@
 <?php
 
-namespace Models;
+namespace Codespace\PhpTools\Models;
 
 class Router { 
-    private $routes;
+    private array $routes;
 public function __construct() {
 $this->routes = [];
 
 }
-public function addRoute(string $method,string $path, string $controller, string $action)  { 
+public function addRoute(string $method,string $path, string $controller, string $action): void
+{
  $this->routes [] = [
     'method' => $method,
     'path' => $path,
@@ -16,7 +17,8 @@ public function addRoute(string $method,string $path, string $controller, string
     'action' => $action
  ];    
 }
- public function getHandler(string $method, string $uri) { 
+ public function getHandler(string $method, string $uri): ?array
+ {
     foreach($this->routes as $route) {
         if($route['method'] === $method && $route['path'] === $uri) {
             return [

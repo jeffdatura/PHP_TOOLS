@@ -7,7 +7,7 @@ require_once './src/Models/Router.php';
 require_once './src/Controllers/HomeController.php';
 
 //load Class
-use Models\Router;
+use Codespace\PhpTools\Models\Router;
 
 const BASE_URL = '/mvc';
 
