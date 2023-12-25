@@ -12,6 +12,13 @@ class Router
 
     }
 
+    /**
+     * @param string $method
+     * @param string $path
+     * @param string $controller
+     * @param string $action
+     * @return void
+     */
     public function addRoute(string $method, string $path, string $controller, string $action): void
     {
         $this->routes [] = [
@@ -22,6 +29,11 @@ class Router
         ];
     }
 
+    /**
+     * @param string $method
+     * @param string $uri
+     * @return array|null
+     */
     public function getHandler(string $method, string $uri): ?array
     {
         foreach ($this->routes as $route) {
